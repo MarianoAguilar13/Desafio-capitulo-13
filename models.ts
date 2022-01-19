@@ -16,8 +16,13 @@ class Product {
 class ProductCollection {
   products: Product[] = [];
 
-  load() {
-    this.products = jsonfile.readFileSync("./products.json");
+  //creo una funcion asincronica, esta funcion se detiene en el await
+  //y sigue ejecutandose el resto del codigo de js, porque js es non-blocking
+  //luego cuando la promesa se cumple, osea entra en el then, continua la funcion
+  //y retorna una pormesa
+  async load() {
+    this.products = await jsonfile.readFile("./products.json");
+    return this.products;
   }
 
   getAll() {

@@ -9,9 +9,14 @@ devuelva el método getById(id:number), sino tiene que devolver getAll().*/
 
 class ProductController {
   productosLista: ProductCollection;
+  //creo la caracteristica promesa para que pueda ser escuchada en el idex
+  promesa: Promise<any>;
   constructor() {
     this.productosLista = new ProductCollection();
-    this.productosLista.load();
+    //aca retorna la promesa que se crea cuando cargo el archivo json
+    const promesaProdLoad = this.productosLista.load();
+    //la caracteristica promesa sera lo que devuelve el this.productosLista.load();
+    this.promesa = promesaProdLoad;
   }
 
   processOptions(option: any) {
