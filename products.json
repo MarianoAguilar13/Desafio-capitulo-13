@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Mayonesa",
+    "categoria": "Alimentos"
+  },
+  {
+    "id": 2,
+    "name": "Dulce de leche",
+    "categoria": "Alimentos"
+  },
+  {
+    "id": 3,
+    "name": "Televisor",
+    "categoria": "Electrodomestico"
+  },
+  {
+    "id": 4,
+    "name": "Cuchraras Soperas - Set x6",
+    "categoria": "Utencillos"
+  },
+  {
+    "id": 5,
+    "name": "Pelota de futbol",
+    "categoria": "Deportes"
+  }
+]
